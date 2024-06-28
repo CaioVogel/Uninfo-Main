@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% load static %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="{% static 'Style.css' %}" rel="stylesheet">
+
+  </head>
+
+  {% for po in post %}
+    <h1>{{ po.name }}</h1>
+    <h4>{{ po.description | linebreaks }}</h4>
+    <h2>Comentários: <a href="/comment/{{ po }}"> Adicionar comentário </a></h2>
+
+    {% for co in Comment %}
+      {% if po == co.post %}
+        <h3>{{ co.name }}</h3>
+        <h5>{{ co.body | linebreaks }}</h5>
+        <a href="/Remover/{{ co.id }}">Remover comentário</a> <a href="/Editar/{{ co.id }}">Editar comentário</a>
+      {% endif %} 
+    {% endfor %}
+  {% endfor %}
+
+</html>

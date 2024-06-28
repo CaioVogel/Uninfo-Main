@@ -1,5 +1,3 @@
-default_app_config = 'accounts.apps.AccountsConfig'
-
 from django.contrib import admin
 from .models import Post, comment
 

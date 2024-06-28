@@ -18,11 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 from Uninfo import views
+from uninfo import views
 from django.contrib.auth import views as auth_views
 
 
 
 urlpatterns = [
+    path('',views.inicio),
+    path('comment/<str:Name>/', views.adicionar_comment),
+    path('Remover/<str:id>/', views.Remover_comment),
+    path('Editar/<str:id>/', views.Editar_comment),
     path('admin/', admin.site.urls),
     path('favoritos',views.favoritos,name='favoritos'),
     path('', views.home, name='home'),
