@@ -1,0 +1,18 @@
+<html>
+<head>
+    <title>Cursos</title>
+</head>
+<body>
+    <h1>Lista de Cursos</h1>
+    <ul>
+        {% for curso in cursos %}
+            <li>
+                <h2>{{ curso.nome }}</h2>
+                <p>Duração: {{ curso.duracao }} anos</p>
+                <p>Descrição: {{ curso.descricaocurso }}</p>
+                <p>Universidade: {{ curso.universidade.nome }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
