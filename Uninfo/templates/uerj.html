@@ -1,0 +1,56 @@
+<html lang="pt-BR">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>UERJ</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <h1 class="university-name">Universidade Estadual do Rio de Janeiro (UERJ)</h1>
+        <img src="{% static 'imagens/logomarca-uerj.png' %}" class="university-logo">
+    </header>
+    <main>
+        <div class="grid-container">
+            <div class="grid-item">
+                <h2>Cursos</h2>
+                <ul>
+                    <li>Exatas</li>
+                    <li>Humanas</li>
+                    <li>Naturezas</li>
+                </ul>
+                <button>Saiba Mais</button>
+            </div>
+            <div class="grid-item">
+                <h2>Extracurricular</h2>
+                <ul>
+                    <li>Equipes de competição</li>
+                    <li>Ligas</li>
+                    <li>Empresas jr</li>
+                </ul>
+                <button>Saiba Mais</button>
+            </div>
+            <div class="grid-item">
+                <h2>Oportunidades</h2>
+                <ul>
+                    <li>Iniciação científica</li>
+                    <li>Estágios dentro da faculdade</li>
+                    <li>Projetos</li>
+                </ul>
+                <button>Saiba Mais</button>
+            </div>
+            <div class="grid-item">
+                <h2>Intercâmbio</h2>
+                <p>Todas as informações sobre intercâmbio</p>
+                <button>Saiba Mais</button>
+            </div>
+        </div>
+    </main>
+</body>
+    <footer>
+        <p>UNINFO © - A plataforma universitária</p>
+        <a href="https://www.instagram.com" target="_blank" style="color: white;"><img src="https://i.imgur.com/z0rhe68.png" width="30" height="30"></a> 
+        <a href="https://www.twitter.com" target="_blank" style="color: white;"><img src="https://i.imgur.com/3TI16ad.png" width="30" height="30"></a> 
+        <a href="https://www.facebook.com" target="_blank" style="color: white;"><img src="https://i.imgur.com/Rn9vYMZ.png" width="30" height="30"></a>
+    </footer>
+</html>

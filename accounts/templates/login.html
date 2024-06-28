@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    /* Reset básico */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Estilo geral da página */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: lightgoldenrodyellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #333; /* Cor padrão para o texto */
+    }
+
+    /* Contêiner do login */
+    .login-container, .container-profile {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #800080; /* Cor verde */
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    button {
+        background-color: #0000FF; /* Cor verde */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .container-profile p {
+        margin-bottom: 10px;
+    }
+
+    .container-profile a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #blue; /* Cor verde */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .container-profile a:hover {
+        text-decoration: underline;
+    }
+
+  </style>
+  <meta charset="UTF-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Login</title>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form method="post">
+      {% csrf_token %}
+      <label for="username">Nome de usuário:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password">Senha:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <button type="submit">Avançar</button>
+    </form>
+  </div>
+</body>
+</html>

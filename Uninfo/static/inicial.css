@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  color: #333;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  text-align: center;
+}
+
+.university {
+  width: auto; /* Defina o tamanho desejado para as logos */
+  height: 200px; /* Mantenha a proporção da imagem */
+}
+
+.card-text {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
