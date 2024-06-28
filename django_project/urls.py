@@ -15,29 +15,27 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from django.urls.conf import include
-from Uninfo import views
-from uninfo import views
+from django.urls import path, include
+from Uninfo import views as U1
+from uninfo import views as U2 
+from accounts import views as accounts_views
 from django.contrib.auth import views as auth_views
 
-
-
 urlpatterns = [
-    path('',views.inicio),
-    path('comment/<str:Name>/', views.adicionar_comment),
-    path('Remover/<str:id>/', views.Remover_comment),
-    path('Editar/<str:id>/', views.Editar_comment),
     path('admin/', admin.site.urls),
-    path('favoritos',views.favoritos,name='favoritos'),
-    path('', views.home, name='home'),
-    path('inscricoes/', views.inscricao),
-    path('inscricoes/sucesso/', views.inscricao_sucesso, name='sucesso'),
-    path('inicial/', views.tela_principal),
-    path('PUC-Rio/', views.pag_puc, name='pag_puc'),
-    path('UERJ/', views.pag_uerj, name='pag_uerj'),
-    path('UFRJ/', views.pag_ufrj, name='pag_ufrj'),
+    path('favoritos/', U1.favoritos,name='favoritos'),
+    path('', U1.home, name='home'),
+    path('inscricoes/', U1.inscricao),
+    path('inscricoes/sucesso/', U1.inscricao_sucesso, name='sucesso'),
+    path('inicial/', U1.tela_principal),
+    path('PUC-Rio/', U1.pag_puc, name='pag_puc'),
+    path('UERJ/', U1.pag_uerj, name='pag_uerj'),
+    path('UFRJ/', U1.pag_ufrj, name='pag_ufrj'),
     path('accounts/', include('accounts.urls')),
-    path('cadastro_atividade/', views.adicionar_atividade, name='cadastro_atividade'),
-    path('cursos/', views.pag_cursos, name = 'pag_cursos')
+    path('cadastro_atividade/', U1.adicionar_atividade, name='cadastro_atividade'),
+    path('cursos/', U1.pag_cursos, name='pag_cursos'),
+    path('comment/<str:Name>/', U2.adicionar_comment, name='adicionar_comment'),
+    path('Remover/<str:id>/', U2.Remover_comment, name='remover_comment'),
+    path('Editar/<str:id>/', U2.Editar_comment, name='editar_comment'),
 ]
+
