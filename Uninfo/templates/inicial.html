@@ -1,0 +1,34 @@
+<html>
+  <head>
+    {% load static %}
+    <link href="{% static 'inicial.css' %}" rel="stylesheet">
+    <script src="{% static 'script.js' %}"></script>
+      <title>UNINFO - Pagina inicial</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+  </head>
+  
+<body>
+  <h1>UNINFO</h1>
+  <p>A UNINFO é uma plataforma dedicada a ajudar estudantes a descobrir e aproveitar as diversas oportunidades oferecidas pelas universidades. Nosso objetivo é centralizar informações sobre estágios, bolsas de estudo, programas de pesquisa, eventos, monitorias, competições e outras iniciativas acadêmicas, facilitando o acesso e a compreensão para todos os alunos. Além disso, oferecemos orientações para aqueles que ainda não decidiram qual curso seguir, proporcionando uma experiência acadêmica mais inclusiva e enriquecedora.</p>
+
+  <button onclick="window.location.href='/accounts/profile'">
+      <img src="path/to/profile-icon.png" alt="Perfil">
+  </button>
+
+  <h2>Universidades</h2>
+
+  <div class="card-container">
+    {% for universidade in universidades %}
+      <div class="card">
+        <a href="/{{universidade.sigla}}">
+          <img class="university" src="{{ universidade.logo }}" alt="{{ universidade.nome_completo }}">
+          <div class="card-text">{{ universidade.nome_completo }}</div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+
+</body>
+
+</html>

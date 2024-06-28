@@ -1,0 +1,32 @@
+<html>
+<head>
+    {% load static %}
+    <link href="{% static 'home.css' %}" rel="stylesheet">
+    <script src="{% static 'script.js' %}"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Jomolhari&display=swap" rel="stylesheet">
+    
+    <title>Home</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    
+  <div class="container">
+      <h1> <img src="{% static 'imagens/Uninfo - logo.png' %}" alt="Logo Uninfo" class="logo" width="200" height="100">Tudo sobre vida a universitária</h1>
+      <h3>Encontre todas as informações e oportunidades das universidades em um só lugar.</h3>
+      <div class="button-container">
+          <button class='botoes-iniciais' onclick="window.location.href='/inscricoes'">Inscreva-se</button>
+          <button class='botoes-iniciais' onclick="window.location.href='/accounts/login'">Fazer login</button>
+          <button class='botoes-iniciais' onclick="window.location.href='/inicial'">Pular</button>
+          
+      </div>
+      
+  </div>
+    
+</body>
+</html>
